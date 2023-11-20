@@ -1,0 +1,399 @@
+┌─(~/dev/moldyn/lysozyme)────────────────────────────────────────────────────────────(enrico@ustudio:pts/0)─┐
+└─(18:30:18)─moldyn─> gmx pdb2gmx -f 1AKI_clean.pdb -o 1AKI_processed.gro -water spce         ──(Sun,Nov19)─┘
+:-) GROMACS - gmx pdb2gmx, 2023.3-conda_forge (-:
+
+Executable:   /home/enrico/miniforge3/envs/moldyn/bin.AVX2_256/gmx
+Data prefix:  /home/enrico/miniforge3/envs/moldyn
+Working dir:  /home/enrico/Development/moldyn/lysozyme
+Command line:
+gmx pdb2gmx -f 1AKI_clean.pdb -o 1AKI_processed.gro -water spce
+
+Select the Force Field:
+
+From '/home/enrico/miniforge3/envs/moldyn/share/gromacs/top':
+
+1: AMBER03 protein, nucleic AMBER94 (Duan et al., J. Comp. Chem. 24, 1999-2012, 2003)
+
+2: AMBER94 force field (Cornell et al., JACS 117, 5179-5197, 1995)
+
+3: AMBER96 protein, nucleic AMBER94 (Kollman et al., Acc. Chem. Res. 29, 461-469, 1996)
+
+4: AMBER99 protein, nucleic AMBER94 (Wang et al., J. Comp. Chem. 21, 1049-1074, 2000)
+
+5: AMBER99SB protein, nucleic AMBER94 (Hornak et al., Proteins 65, 712-725, 2006)
+
+6: AMBER99SB-ILDN protein, nucleic AMBER94 (Lindorff-Larsen et al., Proteins 78, 1950-58, 2010)
+
+7: AMBERGS force field (Garcia & Sanbonmatsu, PNAS 99, 2782-2787, 2002)
+
+8: CHARMM27 all-atom force field (CHARM22 plus CMAP for proteins)
+
+9: GROMOS96 43a1 force field
+
+10: GROMOS96 43a2 force field (improved alkane dihedrals)
+
+11: GROMOS96 45a3 force field (Schuler JCC 2001 22 1205)
+
+12: GROMOS96 53a5 force field (JCC 2004 vol 25 pag 1656)
+
+13: GROMOS96 53a6 force field (JCC 2004 vol 25 pag 1656)
+
+14: GROMOS96 54a7 force field (Eur. Biophys. J. (2011), 40,, 843-856, DOI: 10.1007/s00249-011-0700-9)
+
+15: OPLS-AA/L all-atom force field (2001 aminoacid dihedrals)
+15
+
+Using the Oplsaa force field in directory oplsaa.ff
+
+going to rename oplsaa.ff/aminoacids.r2b
+Opening force field file /home/enrico/miniforge3/envs/moldyn/share/gromacs/top/oplsaa.ff/aminoacids.r2b
+Reading 1AKI_clean.pdb...
+WARNING: all CONECT records are ignored
+Read 'LYSOZYME', 1001 atoms
+
+Analyzing pdb file
+Splitting chemical chains based on TER records or chain id changing.
+
+There are 1 chains and 0 blocks of water and 129 residues with 1001 atoms
+
+chain  #res #atoms
+
+1 'A'   129   1001
+
+All occupancies are one
+All occupancies are one
+Opening force field file /home/enrico/miniforge3/envs/moldyn/share/gromacs/top/oplsaa.ff/atomtypes.atp
+
+Reading residue database... (Oplsaa)
+Opening force field file /home/enrico/miniforge3/envs/moldyn/share/gromacs/top/oplsaa.ff/aminoacids.rtp
+Opening force field file /home/enrico/miniforge3/envs/moldyn/share/gromacs/top/oplsaa.ff/aminoacids.hdb
+Opening force field file /home/enrico/miniforge3/envs/moldyn/share/gromacs/top/oplsaa.ff/aminoacids.n.tdb
+Opening force field file /home/enrico/miniforge3/envs/moldyn/share/gromacs/top/oplsaa.ff/aminoacids.c.tdb
+
+Processing chain 1 'A' (1001 atoms, 129 residues)
+Analysing hydrogen-bonding network for automated assignment of histidine
+protonation. 213 donors and 184 acceptors were found.
+There are 255 hydrogen bonds
+Will use HISE for residue 15
+
+Identified residue LYS1 as a starting terminus.
+
+Identified residue LEU129 as a ending terminus.
+8 out of 8 lines of specbond.dat converted successfully
+Special Atom Distance matrix:
+CYS6   MET12   HIS15   CYS30   CYS64   CYS76   CYS80
+SG48    SD87  NE2118   SG238   SG513   SG601   SG630
+MET12    SD87   1.166
+HIS15  NE2118   1.776   1.019
+CYS30   SG238   1.406   1.054   2.069
+CYS64   SG513   2.835   1.794   1.789   2.241
+CYS76   SG601   2.704   1.551   1.468   2.116   0.765
+CYS80   SG630   2.959   1.951   1.916   2.391   0.199   0.944
+CYS94   SG724   2.550   1.407   1.382   1.975   0.665   0.202   0.855
+MET105   SD799   1.827   0.911   1.683   0.888   1.849   1.461   2.036
+CYS115   SG889   1.576   1.084   2.078   0.200   2.111   1.989   2.262
+CYS127   SG981   0.197   1.072   1.721   1.313   2.799   2.622   2.934
+CYS94  MET105  CYS115
+SG724   SD799   SG889
+MET105   SD799   1.381
+CYS115   SG889   1.853   0.790
+CYS127   SG981   2.475   1.686   1.483
+Linking CYS-6 SG-48 and CYS-127 SG-981...
+Linking CYS-30 SG-238 and CYS-115 SG-889...
+Linking CYS-64 SG-513 and CYS-80 SG-630...
+Linking CYS-76 SG-601 and CYS-94 SG-724...
+Start terminus LYS-1: NH3+
+End terminus LEU-129: COO-
+
+Checking for duplicate atoms....
+
+Generating any missing hydrogen atoms and/or adding termini.
+
+Now there are 129 residues with 1960 atoms
+
+Making bonds...
+
+Number of bonds was 1984, now 1984
+
+Generating angles, dihedrals and pairs...
+Before cleaning: 5142 pairs
+Before cleaning: 5187 dihedrals
+
+Making cmap torsions...
+
+There are 5187 dihedrals,  426 impropers, 3547 angles
+5106 pairs,     1984 bonds and     0 virtual sites
+
+Total mass 14313.193 a.m.u.
+
+Total charge 8.000 e
+
+Writing topology
+
+Writing coordinate file...
+
+--------- PLEASE NOTE ------------
+
+You have successfully generated a topology from: 1AKI_clean.pdb.
+
+The Oplsaa force field and the spce water model are used.
+
+--------- ETON ESAELP ------------
+
+GROMACS reminds you: "Rockets are cool. There's no getting around that." (Elon Musk)
+
+┌─(~/dev/moldyn/lysozyme)────────────────────────────────────────────────────────────(enrico@ustudio:pts/0)─┐
+└─(18:31:15)─moldyn─> ll                                                                      ──(Sun,Nov19)─┘
+total 888K
+-rw-rw-r-- 1 enrico enrico 108K Nov 19 18:30 1AKI_clean.pdb
+-rw-r--r-- 1 enrico enrico 114K Nov 19 18:29 1aki.pdb
+-rw-rw-r-- 1 enrico enrico  87K Nov 19 18:31 1AKI_processed.gro
+-rw-rw-r-- 1 enrico enrico  31K Nov 19 18:31 posre.itp
+-rw-rw-r-- 1 enrico enrico 541K Nov 19 18:31 topol.top
+┌─(~/dev/moldyn/lysozyme)────────────────────────────────────────────────────────────(enrico@ustudio:pts/0)─┐
+└─(18:32:23)─moldyn─> head -10 posre.itp                                                          ──(Sun,Nov19)─┘
+; In this topology include file, you will find position restraint
+; entries for all the heavy atoms in your original pdb file.
+; This means that all the protons which were added by pdb2gmx are
+; not restrained.
+
+[ position_restraints ]
+; atom  type      fx      fy      fz
+1     1  1000  1000  1000
+5     1  1000  1000  1000
+7     1  1000  1000  1000
+
+
+┌─(~/dev/moldyn/lysozyme)────────────────────────────────────────────────────────────(enrico@ustudio:pts/0)─┐
+└─(18:33:27)─moldyn─>                                                                         ──(Sun,Nov19)─┘
+┌─(~/dev/moldyn/lysozyme)────────────────────────────────────────────────────────────(enrico@ustudio:pts/0)─┐
+└─(18:33:27)─moldyn─> gmx editconf -f 1AKI_processed.gro -o 1AKI_newbox.gro -c -d 1.0 -bt cubic
+:-) GROMACS - gmx editconf, 2023.3-conda_forge (-:
+
+Executable:   /home/enrico/miniforge3/envs/moldyn/bin.AVX2_256/gmx
+Data prefix:  /home/enrico/miniforge3/envs/moldyn
+Working dir:  /home/enrico/Development/moldyn/lysozyme
+Command line:
+gmx editconf -f 1AKI_processed.gro -o 1AKI_newbox.gro -c -d 1.0 -bt cubic
+
+Note that major changes are planned in future for editconf, to improve usability and utility.
+Read 1960 atoms
+Volume: 123.376 nm^3, corresponds to roughly 55500 electrons
+No velocities found
+system size :  3.817  4.234  3.454 (nm)
+diameter    :  5.010               (nm)
+center      :  2.781  2.488  0.017 (nm)
+box vectors :  5.906  6.845  3.052 (nm)
+box angles  :  90.00  90.00  90.00 (degrees)
+box volume  : 123.38               (nm^3)
+shift       :  0.724  1.017  3.488 (nm)
+new center      :  3.505  3.505  3.505 (nm)
+new box vectors :  7.010  7.010  7.010 (nm)
+new box angles  :  90.00  90.00  90.00 (degrees)
+new box volume  : 344.48               (nm^3)
+
+GROMACS reminds you: "Facts are stubborn things, but statistics are more pliable." (Laurence Peter)
+
+┌─(~/dev/moldyn/lysozyme)────────────────────────────────────────────────────────────(enrico@ustudio:pts/0)─┐
+└─(18:34:09)─moldyn─> gmx solvate -cp 1AKI_newbox.gro -cs spc216.gro -o 1AKI_solv.gro -p topol.top
+:-) GROMACS - gmx solvate, 2023.3-conda_forge (-:
+
+Executable:   /home/enrico/miniforge3/envs/moldyn/bin.AVX2_256/gmx
+Data prefix:  /home/enrico/miniforge3/envs/moldyn
+Working dir:  /home/enrico/Development/moldyn/lysozyme
+Command line:
+gmx solvate -cp 1AKI_newbox.gro -cs spc216.gro -o 1AKI_solv.gro -p topol.top
+
+Reading solute configuration
+Reading solvent configuration
+
+Initialising inter-atomic distances...
+
+WARNING: Masses and atomic (Van der Waals) radii will be guessed
+based on residue and atom names, since they could not be
+definitively assigned from the information in your input
+files. These guessed numbers might deviate from the mass
+and radius of the atom type. Please check the output
+files if necessary. Note, that this functionality may
+be removed in a future GROMACS version. Please, consider
+using another file format for your input.
+
+NOTE: From version 5.0 gmx solvate uses the Van der Waals radii
+from the source below. This means the results may be different
+compared to previous GROMACS versions.
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+A. Bondi
+van der Waals Volumes and Radii
+J. Phys. Chem. 68 (1964) pp. 441-451
+-------- -------- --- Thank You --- -------- --------
+
+Generating solvent configuration
+Will generate new solvent configuration of 4x4x4 boxes
+Solvent box contains 39252 atoms in 13084 residues
+Removed 5451 solvent atoms due to solvent-solvent overlap
+Removed 1869 solvent atoms due to solute-solvent overlap
+Sorting configuration
+Found 1 molecule type:
+SOL (   3 atoms): 10644 residues
+Generated solvent containing 31932 atoms in 10644 residues
+Writing generated configuration to 1AKI_solv.gro
+
+Output configuration contains 33892 atoms in 10773 residues
+Volume                 :     344.484 (nm^3)
+Density                :     997.935 (g/l)
+Number of solvent molecules:  10644
+
+Processing topology
+Adding line for 10644 solvent molecules with resname (SOL) to topology file (topol.top)
+
+Back Off! I just backed up topol.top to ./#topol.top.1#
+
+GROMACS reminds you: "No One Could Foresee the End That Came So Fast" (Slayer)
+
+┌─(~/dev/moldyn/lysozyme)────────────────────────────────────────────────────────────(enrico@ustudio:pts/0)─┐
+└─(18:35:42)─moldyn─> gmx grompp -f ions.mdp -c 1AKI_solv.gro -p topol.top -o ions.tpr        ──(Sun,Nov19)─┘
+
+:-) GROMACS - gmx grompp, 2023.3-conda_forge (-:
+
+Executable:   /home/enrico/miniforge3/envs/moldyn/bin.AVX2_256/gmx
+Data prefix:  /home/enrico/miniforge3/envs/moldyn
+Working dir:  /home/enrico/Development/moldyn/lysozyme
+Command line:
+gmx grompp -f ions.mdp -c 1AKI_solv.gro -p topol.top -o ions.tpr
+
+Ignoring obsolete mdp entry 'ns_type'
+
+NOTE 1 [file ions.mdp]:
+With Verlet lists the optimal nstlist is >= 10, with GPUs >= 20. Note
+that with the Verlet scheme, nstlist has no effect on the accuracy of
+your simulation.
+
+Setting the LD random seed to -1638139009
+
+Generated 330891 of the 330891 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 0.5
+
+Generated 330891 of the 330891 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+NOTE 2 [file topol.top, line 18409]:
+System has non-zero total charge: 8.000000
+Total charge should normally be an integer. See
+http://www.gromacs.org/Documentation/Floating_Point_Arithmetic
+for discussion on how close it should be to an integer.
+
+
+
+Analysing residue names:
+There are:   129    Protein residues
+There are: 10644      Water residues
+Analysing Protein...
+Number of degrees of freedom in T-Coupling group rest is 69741.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+NOTE 3 [file ions.mdp]:
+You are using a plain Coulomb cut-off, which might produce artifacts.
+You might want to consider using PME electrostatics.
+
+
+
+This run will generate roughly 3 Mb of data
+
+There were 3 NOTEs
+
+GROMACS reminds you: "When a distinguished but elderly scientist states that something is possible, he is almost certainly right. When he states that something is impossible, he is very probably wrong." (Arthur C. Clarke)
+
+┌─(~/dev/moldyn/lysozyme)────────────────────────────────────────────────────────────(enrico@ustudio:pts/0)─┐
+└─(18:38:24)─moldyn─> gmx genion -s ions.tpr -o 1AKI_solv_ions.gro -p topol.top -pname NA -nname CL -neutral
+
+:-) GROMACS - gmx genion, 2023.3-conda_forge (-:
+
+Executable:   /home/enrico/miniforge3/envs/moldyn/bin.AVX2_256/gmx
+Data prefix:  /home/enrico/miniforge3/envs/moldyn
+Working dir:  /home/enrico/Development/moldyn/lysozyme
+Command line:
+gmx genion -s ions.tpr -o 1AKI_solv_ions.gro -p topol.top -pname NA -nname CL -neutral
+
+Reading file ions.tpr, VERSION 2023.3-conda_forge (single precision)
+Reading file ions.tpr, VERSION 2023.3-conda_forge (single precision)
+Will try to add 0 NA ions and 8 CL ions.
+Select a continuous group of solvent molecules
+Group     0 (         System) has 33892 elements
+Group     1 (        Protein) has  1960 elements
+Group     2 (      Protein-H) has  1001 elements
+Group     3 (        C-alpha) has   129 elements
+Group     4 (       Backbone) has   387 elements
+Group     5 (      MainChain) has   517 elements
+Group     6 (   MainChain+Cb) has   634 elements
+Group     7 (    MainChain+H) has   646 elements
+Group     8 (      SideChain) has  1314 elements
+Group     9 (    SideChain-H) has   484 elements
+Group    10 (    Prot-Masses) has  1960 elements
+Group    11 (    non-Protein) has 31932 elements
+Group    12 (          Water) has 31932 elements
+Group    13 (            SOL) has 31932 elements
+Group    14 (      non-Water) has  1960 elements
+Select a group: 13
+Selected 13: 'SOL'
+Number of (3-atomic) solvent molecules: 10644
+
+Processing topology
+Replacing 8 solute molecules in topology file (topol.top)  by 0 NA and 8 CL ions.
+
+Back Off! I just backed up topol.top to ./#topol.top.2#
+Using random seed -890146353.
+Replacing solvent molecule 7753 (atom 25219) with CL
+Replacing solvent molecule 2491 (atom 9433) with CL
+Replacing solvent molecule 10467 (atom 33361) with CL
+Replacing solvent molecule 5194 (atom 17542) with CL
+Replacing solvent molecule 8581 (atom 27703) with CL
+Replacing solvent molecule 2326 (atom 8938) with CL
+Replacing solvent molecule 8156 (atom 26428) with CL
+Replacing solvent molecule 9902 (atom 31666) with CL
+
+
+GROMACS reminds you: "Academia is kind of like applied Marxism. The workers really do own the means of production." (Niklas Blomberg)
+
+┌─(~/dev/moldyn/lysozyme)────────────────────────────────────────────────────────────(enrico@ustudio:pts/0)─┐
+└─(18:39:14)─moldyn─> pymol 1AKI_solv_ions.gro                                                ──(Sun,Nov19)─┘
+PyMOL(TM) Molecular Graphics System, Version 2.5.0.
+Copyright (c) Schrodinger, LLC.
+All Rights Reserved.
+
+Created by Warren L. DeLano, Ph.D.
+
+PyMOL is user-supported open-source software.  Although some versions
+are freely available, PyMOL is not in the public domain.
+
+If PyMOL is helpful in your work or study, then please volunteer
+support for our ongoing efforts to create open and affordable scientific
+software by purchasing a PyMOL Maintenance and/or Support subscription.
+
+More information can be found at "http://www.pymol.org".
+
+Enter "help" for a list of commands.
+Enter "help <command-name>" for information on a specific command.
+
+Hit ESC anytime to toggle between text and graphics.
+
+Detected OpenGL version 4.6. Shaders available.
+Geometry shaders not available
+Detected GLSL version 4.60.
+OpenGL graphics engine:
+GL_VENDOR:   Intel
+GL_RENDERER: Mesa Intel(R) UHD Graphics (TGL GT2)
+GL_VERSION:  4.6 (Compatibility Profile) Mesa 23.2.1-1ubuntu3
+Detected 4 CPU cores.  Enabled multithreaded rendering.
+CmdLoad: "1AKI_solv_ions.gro" loaded as "1AKI_solv_ions".
+Incentive-Only-Error: "clean" is not available in Open-Source PyMOL
+
+Please visit http://pymol.org if you are interested in the
+full featured "Incentive PyMOL" version.
+
+┌─(~/dev/moldyn/lysozyme)────────────────────────────────────────────────────────────(enrico@ustudio:pts/0)─┐
+└─(18:43:16)─moldyn─>                                                                         ──(Sun,Nov19)─┘
+┌─(~/dev/moldyn/lysozyme)────────────────────────────────────────────────────────────(enrico@ustudio:pts/0)─┐
